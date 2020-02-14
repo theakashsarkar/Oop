@@ -26,12 +26,43 @@
         {
            echo $this->hands = $hands;
         }
+      protected function showClassName()
+      {
+         return __CLASS__;
+      }
+      public function showClass()
+      {
+         echo "Animal \n";
+      }
 
 
    }
    class Mamal extends Animal
    {
-    
+     public $size; 
+     public function __construct($hands = 0,$ears = 0,$legs = 0,$eye = 0,$size = 0)
+     {
+        parent::__construct($hands = 0,$ears = 0,$legs = 0,$eye = 0);
+        $this->size = $size;
+     }
+     function showSize()
+     {
+       echo parent::showClassName()."\n";
+        echo "size dosn't metter $this->size";
+     }
+     public function showClass()
+     {
+        echo "Mamal \n";
+     }
+     
    }
-   $dog = new Mamal(4,2,4,5);
-   echo $dog->getHands();
+   class Human extends Mamal
+   {
+
+   }
+   $dog = new Mamal(4,2,4,5,"big");
+   echo $dog->showClass();
+   $animal = new Animal;
+   $animal->showClass();
+   $akash = new Human;
+   $akash->showClass();
