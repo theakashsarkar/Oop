@@ -6,7 +6,7 @@
       private $ears;
       private $eyes;
 
-      public function __constructor($legs,$heand,$ears,$eyes){
+      public function __construct($legs,$heand,$ears,$eyes){
           $this->legs  = $legs;
           $this->heand = $heand;
           $this->ears  = $ears;
@@ -37,15 +37,15 @@
   {
     private $size;
 
-    public function __constructor($legs,$heand,$ears,$eyes,$size)
+    public function __construct($legs = 0,$heand = 0,$ears =0,$eyes=0,$size=0)
     {
-        parent::__constructor($legs,$heand,$ears,$eyes);
+        parent:: __construct($legs,$heand,$ears,$eyes);
         $this->size = $size;
     }
 
     public function showSize()
     {
-      echo "size is $this->size";
+      echo "size is $this->size with $this->legs legs \n";
     }
 
     public function showClass()
@@ -56,4 +56,4 @@
   }
 
   $dog = new Mamal(4,0,2,2,'big');
-  echo $dog->showClass();
+  echo $dog->showSize();
