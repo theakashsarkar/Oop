@@ -32,7 +32,7 @@
       }
       public function showClass()
       {
-         echo "Animal \n";
+         echo "Animal";
       }
 
 
@@ -58,11 +58,9 @@
    }
    class Human extends Mamal
    {
-
+      
    }
    $dog = new Mamal(4,2,4,5,"big");
    echo $dog->showClass();
    $animal = new Animal;
    $animal->showClass();
-   $akash = new Human;
-   $akash->showClass();
