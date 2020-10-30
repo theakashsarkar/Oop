@@ -10,3 +10,4 @@ class AdminManagement extends UserManagement
     public User $user;
 }
 $one = new User;
+var_dump($one);
