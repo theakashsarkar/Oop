@@ -51,4 +51,4 @@ class DogShelter implements AnimalShelter{
 $kitty = (new CatShelter)->adopt('hello');
 $eatFood = new AnimalFood;
 $kitty->eat($eatFood);
-echo "\n"
+echo "\n";
